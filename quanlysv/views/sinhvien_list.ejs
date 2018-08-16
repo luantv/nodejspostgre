@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>SINH VIEN LIST</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<table width="500" border="1">
+		<th>IDh
+		<th>Hoten</th>
+		<th>Email</th>
+		<th><a href="../sinhvien/them">Them</a></th>
+
+		<% danhsach.rows.forEach(function(sv){ %>
+		<tr>
+			<td><%= sv.id %></td>
+			<td><%= sv.hoten %></td>
+			<td><%= sv.email %></td>
+			<td>
+				<a href="../sinhvien/sua/<%= sv.id %>">Sua</a> - 
+				<a href="../sinhvien/xoa/<%= sv.id %>">Xoa</a>
+			</td>
+		</tr>
+		< % }) %>
+	</table>
+</body>
+</html>
